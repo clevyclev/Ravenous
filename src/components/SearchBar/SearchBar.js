@@ -49,7 +49,9 @@ class SearchBar extends React.Component{
   renderSortByOptions(){
     return Object.keys(sortByOptions).map(sortByOption => {
       let sortByOptionValue = sortByOptions[sortByOption];
-      return <li className={this.getSortByClass(sortByOptionValue)} key={sortByOptionValue} onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>{sortByOption}</li>;
+      return <li className={this.getSortByClass(sortByOptionValue)}
+      key={sortByOptionValue}
+      onClick={this.handleSortByChange.bind(this, sortByOptionValue)}>{sortByOption}</li>;
     });
   }
 
